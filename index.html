@@ -4,16 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
     <nav class="navbar">
         <img src="assets/images/hbo-logo.svg" alt="Logo da HBO">
         <div id="nav-buttons">
-            <p>ENTRAR</p>
-            <div id="nav-subscription">ASSINE AGORA</div>
+            <button class="nav-button-objeto" id="nav-button_login">ENTRAR</button>
+            <button class="nav-button-objeto" id="nav-button-subscription">ASSINE AGORA</button>
         </div>
     </nav>
+    <main>
+        <header>
+            <div class="channels">
+                <img class="header_channel" src="assets/images/hbo.png" alt="">
+                <img class="header_channel" src="assets/images/dc.png" alt="">
+                <img class="header_channel" src="assets/images/wb.png" alt="">
+                <img class="header_channel" src="assets/images/cartoon-network_neutral.png" alt="">
+                <img class="header_channel" src="assets/images/max_originals.png" alt="">
+            </div>
+            <div class="header_title">
+                <h2>CURTA AS MELHORES HISTÓRIAS</h2>
+                <h1>PARA TODO MUNDO</h1>
+            </div>
+            <div class="header_line"></div>
+            <div class="header_preco">
+                <p>Assinaturas a partir de</p>
+                <div id="header_preco_valor">
+                    <h1>R$14,15</h1>
+                    <p>/mês</p>
+                </div>
+            </div>
+            <button class="button button--gradient header__button">ASSINE AGORA</button>
+            <div class="header_padding">
+                <p>*aplicável ao plano anual com o pagamento antecipado.</p>
+            </div>
+        </header>
+    </main>
     
 </body>
 </html>
