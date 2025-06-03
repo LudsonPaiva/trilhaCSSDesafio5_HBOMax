@@ -1,4 +1,6 @@
 
+/* Header */
+
 main header {
   display: flex;
   flex-direction: column;
@@ -13,6 +15,7 @@ header {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .channels {
   margin-top: 10rem;
@@ -47,7 +50,7 @@ header {
 
 .header_line {
   margin-top: 2.5rem;
-  width: 55rem;
+  width: 50%;
   height: 0.4rem;  
   background: var(--divider-bg-color);
 }
@@ -149,6 +152,118 @@ header {
         transform: rotate(0);
     }
 }
+
+/* Main */
+
+.main_plans {
+  background: url(/assets/images/background-movies-series.png) #020228;
+  background-repeat: no-repeat;
+  background-position: right;
+  color: white;
+  height: 60rem;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+}
+
+.main_plans_title {
+  width: 85%;
+  padding: 5rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.main_plans_cards {
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem; 
+}
+
+.main_plans_card {
+  padding: 60px;
+  width: 40rem;
+  height: 45rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  background: var(--card-bg-color);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  transition: transform 1s ease-in-out;
+}
+
+.main_plans_cards:has(.main_plans_card:nth-child(1):hover)
+  .main_plans_card:nth-child(2) {
+  transform: rotateY(-45deg);
+}
+
+.main_plans_cards:has(.main_plans_card:nth-child(2):hover)
+  .main_plans_card:nth-child(1) {
+  transform: rotateY(45deg);
+}
+
+/* .main_plans_card:hover {
+  .
+  transform: rotateY(45deg);
+} */
+
+
+.main_card_title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main_title_price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.card_title_text {
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.main_price_value {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  color: #ff00e5;
+}
+
+.main_card_item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.main_card_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main_card_button {
+  font-size: 1rem;
+}
+
+
+
+
+
+
 
 
 
