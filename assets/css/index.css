@@ -83,29 +83,6 @@ header {
   margin-top: 3rem;
 }
 
-/* .header_button {
-  width: 18rem;
-  padding: 1.5rem;
-  letter-spacing: 4px;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-align: center;
-  border: none;
-  border-radius: 50px;
-  margin-top: 3rem;
-  color: white;
-  text-justify: center;
-  cursor: pointer;   
-  
-  background: linear-gradient(45deg,#9b34ef 0%,#490cb0 50%, transparent 100%);
-  animation: wiggle 2.2s linear infinite;
-}
-
-.header_button:hover {
-  border: #ff00e5 3px solid;
-  background: transparent;
-} */
-
 .header_padding {
   width: 18rem;
   font-size: 1.2rem;
@@ -115,6 +92,13 @@ header {
 }
 .header_padding p{
   font-family: "Quicksand", sans-serif;
+}
+.header_after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    bottom: 0px;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
 }
 
 @keyframes background_gradient {
@@ -155,8 +139,12 @@ header {
 
 /* Main */
 
+main {
+  background: #020228;
+}
+
 .main_plans {
-  background: url(/assets/images/background-movies-series.png) #020228;
+  background: url(/assets/images/background-movies-series.png);
   background-repeat: no-repeat;
   background-position: right;
   color: white;
@@ -165,7 +153,6 @@ header {
   display: flex;
   flex-flow: column;
   align-items: center;
-
 }
 
 .main_plans_title {
@@ -184,6 +171,8 @@ header {
   align-items: center;
   justify-content: center;
   gap: 5rem; 
+
+  perspective: 1000px;
 }
 
 .main_plans_card {
@@ -199,6 +188,9 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
 
+  transform-style: preserve-3d; 
+  transition: transform 0.6s ease;
+  backface-visibility: hidden;
   transition: transform 1s ease-in-out;
 }
 
@@ -211,12 +203,6 @@ header {
   .main_plans_card:nth-child(1) {
   transform: rotateY(45deg);
 }
-
-/* .main_plans_card:hover {
-  .
-  transform: rotateY(45deg);
-} */
-
 
 .main_card_title{
   display: flex;
@@ -258,6 +244,107 @@ header {
 .main_card_button {
   font-size: 1rem;
 }
+
+.main_channels {
+  margin-top: 15rem;
+}
+
+.main_channel {
+  width: calc(15rem + 15vw);
+  animation-delay: 2s;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid transparent;
+  transition: transform 0.8s, background 0.8s, border 1s; 
+}
+
+.main_channel:hover {
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+  
+  transform: scale(1.05);
+}
+
+.main_channel:hover .main_channel_img {
+  opacity: 0;
+}
+
+/* HBO Content */
+.main_channel:nth-child(1):hover {
+  background-image: url(/assets/images/hbo-hover_0.webp);
+  background-size: cover; /* ou use 'contain' se quiser a imagem inteira visível */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* MAX Content */
+.main_channel:nth-child(2):hover {
+  background-image: url(/assets/images/MAX-Hover.webp);
+  background-size: cover; /* ou use 'contain' se quiser a imagem inteira visível */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* DC Content */
+.main_channel:nth-child(3):hover {
+  background-image: url(/assets/images/DC-Hover.webp);
+  background-size: cover; /* ou use 'contain' se quiser a imagem inteira visível */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Worner Content */
+.main_channel:nth-child(4):hover {
+  background-image: url(/assets/images/WB-Hover.webp);
+  background-size: cover; /* ou use 'contain' se quiser a imagem inteira visível */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Cartoon Content */
+.main_channel:nth-child(5):hover {
+  background-image: url(/assets/images/CN-Hover.png);
+  background-size: cover; /* ou use 'contain' se quiser a imagem inteira visível */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* UCL Content */
+.main_channel:nth-child(6):hover {
+  background-image: url(/assets/images/UCL-Hover.webp);
+  background-size: cover; /* ou use 'contain' se quiser a imagem inteira visível */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main_channel_img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 2s;
+}
+
+.main_channel_title {
+  color: white;
+  margin-bottom: 5rem;
+  margin: auto;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.channel_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+
+
+
 
 
 
