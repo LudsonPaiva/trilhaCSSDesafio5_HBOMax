@@ -8,20 +8,25 @@ main header {
 }
 
 header {
-  height: 60rem;
+  /* height: 60rem; */
   background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
   background-size: 400% 400%;
   animation: background_gradient 5s ease infinite alternate;
+}
+
+.header_content {
+  padding: 24px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 .channels {
-  margin-top: 10rem;
+  margin-top: 12rem;
   height: 5rem;
   display: flex;
-  gap: 3rem;
+  gap: 1.5rem;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -30,44 +35,43 @@ header {
 
 .header_channel {
   object-fit: contain; /* mantém a proporção sem cortar a imagem */
-  transform: scale(1.4);
+  /* transform: scale(1.4); */
 }
 
 .header_title {
-  margin-top: 5rem;
+  margin-top: 2rem;
   color: white;
   text-align: center;
 }
 
 .header_title h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: lighter;
 }
 
 .header_title h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .header_line {
-  margin-top: 2.5rem;
-  width: 50%;
+  padding: 0;
+  width: 70%;
   height: 0.4rem;  
   background: var(--divider-bg-color);
 }
 
 .header_preco {
-  margin-top: 3rem;
   color: white;
   text-align: center;
 }
 
 .header_preco p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: "Quicksand", sans-serif;
 }
 
 .header_preco h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 #header_preco_valor {
@@ -79,15 +83,13 @@ header {
 
 .header__button {
   animation: wiggle 2.2s linear infinite;
-  font-size: 1.4rem;
-  margin-top: 3rem;
+  font-size: 1rem;
 }
 
 .header_padding {
   width: 18rem;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 3rem;
   color: white;
 }
 .header_padding p{
@@ -144,11 +146,11 @@ main {
 }
 
 .main_plans {
-  background: url(/assets/images/background-movies-series.png);
-  background-repeat: no-repeat;
-  background-position: right;
+  
   color: white;
-  height: 60rem;
+  height: auto;
+  padding-bottom: 10rem;
+  padding: 24px;
 
   display: flex;
   flex-flow: column;
@@ -156,31 +158,31 @@ main {
 }
 
 .main_plans_title {
-  width: 85%;
-  padding: 5rem;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  padding-bottom: 2rem;
 }
 
 .main_plans_cards {
-  width: 100%;
-  
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 5rem; 
-
+  gap: 2rem; 
   perspective: 1000px;
 }
 
+.main_item_description {
+  font-size: 1rem;
+}
+
 .main_plans_card {
-  padding: 60px;
-  width: 40rem;
-  height: 45rem;
+  padding: 3rem;
+  width: 100%;
+  height: 42rem;
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   background: var(--card-bg-color);
 
   display: flex;
@@ -206,7 +208,8 @@ main {
 
 .main_card_title{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -220,12 +223,12 @@ main {
 
 .card_title_text {
   font-weight: bolder;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .main_price_value {
   font-weight: bolder;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #ff00e5;
 }
 
@@ -242,11 +245,11 @@ main {
 }
 
 .main_card_button {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .main_channels {
-  margin-top: 15rem;
+  margin-top: 5rem;
 }
 
 .main_channel {
@@ -266,7 +269,6 @@ main {
   margin: 0;
   padding: 0;
   border-radius: 20px;
-  
   transform: scale(1.05);
 }
 
@@ -329,9 +331,8 @@ main {
   margin-bottom: 5rem;
   margin: auto;
   text-align: center;
-  padding: 1.5rem;
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .channel_gallery {
@@ -341,6 +342,40 @@ main {
   margin-top: 40px;
   gap: 20px;
 }
+
+@media screen and (min-width: 500px) {
+  .header_line {
+    width: 50%;
+  }
+  .main_plans {
+    background: url(/assets/images/background-movies-series.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .main_plans_cards {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .main_plans_card {
+    font-size: 1.5rem;
+    width: calc(20rem + 15vw);
+  }
+  .main_card_title{
+    flex-direction: row;
+  }
+  
+  .main_item_description {
+    font-size: 1.25rem;
+  }
+  .channels {
+    margin-top: 8rem;
+  }
+}
+
+
+
+
+
 
 
 
