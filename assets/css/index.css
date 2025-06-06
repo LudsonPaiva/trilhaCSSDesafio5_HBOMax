@@ -8,7 +8,6 @@ main header {
 }
 
 header {
-  /* height: 60rem; */
   background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
   background-size: 400% 400%;
   animation: background_gradient 5s ease infinite alternate;
@@ -35,7 +34,6 @@ header {
 
 .header_channel {
   object-fit: contain; /* mantém a proporção sem cortar a imagem */
-  /* transform: scale(1.4); */
 }
 
 .header_title {

@@ -102,6 +102,10 @@ nav img {
     background: white;
 }
 
+.menu_logo{
+  cursor: pointer;
+}
+
 .button {
   padding: 16px 40px;
   background-color: var(--tertiary-color);
@@ -171,7 +175,6 @@ footer {
   flex-wrap: wrap;
   gap: 2.5rem;
   cursor: pointer;
-  /* transform: scale(1.3) */
 }
 
   ::-webkit-scrollbar {
